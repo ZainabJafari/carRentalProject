@@ -8,15 +8,17 @@ const app = express();
 app.use(express.json());
 app.use(cors(
     {
-        origin: 'https://car-rental-project-frontend-sigma.vercel.app/cars'
-        
+        origin: ['https://car-rental-project-frontend-sigma.vercel.app'],
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        Credentials: true
+
     }
 ));
 app.use('/api/cars', carsRouter);
 app.use('/api/bookings', bookingsRouter);
 app.use('/api/users',userRouter );
 
-const port = process.env.PORT || 8800; // Vercel hanterar PORT
+const port = 8800; // Vercel hanterar PORT
 app.listen(port, () => {
     console.log(`API working on port ${port}`);
 });
