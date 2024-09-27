@@ -30,9 +30,10 @@ export const CarProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchCars = async () => {
     try {
-      const response = await axios.get("https://car-rental-project-api.vercel.app/cars");
+      const response = await axios.get("http://localhost:8800/api/cars");
       setCars(response.data);
       setFilteredCars(response.data);
+      console.log(response.data);
       setNoResults(false); // Reset no results when fetching cars
     } catch (error) {
       console.error('Error fetching cars', error);
@@ -40,7 +41,7 @@ export const CarProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const filterCars = async (make: string, year: string, transmission: string) => {
-    let query = `https://car-rental-project-api.vercel.app/cars?`;
+    let query = `http://localhost:8800/api/cars?`;
 
     if (make !== '') {
       query += `make=${make}&`;
@@ -65,7 +66,7 @@ export const CarProvider = ({ children }: { children: ReactNode }) => {
 
   const fetchCarById = async (id: string) => {
     try {
-      const response = await axios.get(`https://car-rental-project-api.vercel.app/cars/${id}`);
+      const response = await axios.get(`http://localhost:8800/api/cars/${id}`);
       return response.data;
     } catch (error) {
       console.error('Error fetching car by id', error);

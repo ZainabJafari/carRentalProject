@@ -6,12 +6,11 @@ import userRouter from "./routes/user.js"
 
 const app = express();
 app.use(express.json());
-app.use(cors({
-  origin: ['https://car-rental-project-frontend-sigma.vercel.app'],  // Replace with your actual frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
+app.use(cors(
+    {
+        origin: 'http://localhost:3000'
+    }
+));
 app.use('/api/cars', carsRouter);
 app.use('/api/bookings', bookingsRouter);
 app.use('/api/users',userRouter );
