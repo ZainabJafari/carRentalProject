@@ -14,13 +14,14 @@ const Home = () => {
 
   return (
     <main className='overflow-hidden'>
-      <Hero />
+{/*       <Hero />
         <CardHem />
       <div className="flex flex-col justify-center  pt-5 items-center md:flex-row">
         <Reviews />
         <Reviews />
         <Reviews />
-      </div>
+      </div> */}
+      <h1>helllllllo</h1>
     </main>
   );
 }

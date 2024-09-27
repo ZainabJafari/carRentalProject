@@ -1,9 +1,9 @@
-'use client';
+/* 'use client';
 
 import React, { useState } from 'react';
 import { useUserContext } from '@/context/userContext';
 import Modal from '@/components/Modal';
-import { useRouter } from 'next/router'; // Import router
+import { useRouter } from 'next/router'; 
 
 const UserForm: React.FC = () => {
   const { name, email, phone, payment_method, setName, setEmail, setPhone, setPaymentMethod, submitUser } = useUserContext();
@@ -26,7 +26,6 @@ const UserForm: React.FC = () => {
         Driver details
       </h2>
   
-      {/* Name Field */}
       <div className="pb-4">
         <label className="block mb-2 font-medium">Name</label>
         <input
@@ -38,7 +37,6 @@ const UserForm: React.FC = () => {
         />
       </div>
   
-      {/* Email Field */}
       <div className="mb-4">
         <label className="block mb-2 font-medium">Email</label>
         <input
@@ -50,7 +48,6 @@ const UserForm: React.FC = () => {
         />
       </div>
   
-      {/* Phone Field */}
       <div className="mb-4">
         <label className="block mb-2 font-medium">Phone</label>
         <input
@@ -62,7 +59,6 @@ const UserForm: React.FC = () => {
         />
       </div>
   
-      {/* Payment Method Field */}
       <div className="mb-4">
         <label className="block mb-2 font-medium">Payment Method</label>
         <select
@@ -78,7 +74,6 @@ const UserForm: React.FC = () => {
         </select>
       </div>
   
-      {/* Terms and Conditions */}
       <div className="mb-4">
         <label className="block mb-2 font-bold">Terms and Conditions</label>
         <p
@@ -89,7 +84,6 @@ const UserForm: React.FC = () => {
         </p>
       </div>
   
-      {/* Insurance Offer */}
       <div className="mb-4">
         <label className="block mb-2 font-bold">Insurance Offer</label>
         <p
@@ -100,7 +94,6 @@ const UserForm: React.FC = () => {
         </p>
       </div>
   
-      {/* Submit Button */}
       <div className="text-center pt-6">
         <button
           type="submit"
@@ -112,7 +105,6 @@ const UserForm: React.FC = () => {
       </div>
     </form>
   
-    {/* Modals for Terms and Insurance */}
     <Modal
       show={showTermsModal}
       onClose={() => setShowTermsModal(false)}
@@ -134,3 +126,4 @@ const UserForm: React.FC = () => {
 };
 
 export default UserForm;
+ */

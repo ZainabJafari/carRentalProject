@@ -4,7 +4,6 @@ import "./globals.css";
 import { Footer, Navbar } from "@/components";
 import { CarProvider } from "@/context/carContext";
 import { BookingProvider } from "@/context/dateContext";
-import { UserProvider } from "@/context/userContext";
 import SessionWrapper from "@/components/SessionWrapper";
 import { CartProvider } from "@/context/cartContext";
 
@@ -27,11 +26,9 @@ export default function RootLayout({
         <CarProvider>
         <CartProvider>
         <BookingProvider>
-        <UserProvider>
           <Navbar />
           {children}
           <Footer />
-          </UserProvider>
         </BookingProvider>
         </CartProvider>
         </CarProvider>
