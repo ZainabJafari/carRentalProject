@@ -1,0 +1,9 @@
+{
+    "builds": [
+      { "src": "rentCar/next.config.js", "use": "@vercel/next" }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/" }
+    ]
+  }
+  

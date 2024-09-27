@@ -1,4 +1,4 @@
-'use client';
+/* 'use client';
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { useBookingContext } from '@/context/dateContext';
@@ -79,3 +79,4 @@ export const useUserContext = () => {
   }
   return context;
 };
+ */
