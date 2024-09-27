@@ -1,24 +1,27 @@
 import mysql from 'mysql';
 import dotenv from 'dotenv';
 
+// Load environment variables from .env file
 dotenv.config();
 
-console.log('DB_HOST:', process.env.DB_HOST);
-console.log('DB_USER:', process.env.DB_USERNAME);
-console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
 console.log('DB_NAME:', process.env.DB_DBNAME);
 
-export const db = mysql.createConnection({
+const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USERNAME,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DBNAME,
+    port: 3306,
+    connectTimeout: 10000 // 10 seconds
 });
 
 db.connect(err => {
     if (err) {
-        console.error('Database connection failed: ' + err.stack);
+        console.error('Error connecting to the database:', err);
         return;
     }
-    console.log('Connected to database.');
+    console.log('Connected to the database');
 });
+
+// Export db
+export { db };
