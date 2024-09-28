@@ -1,14 +1,14 @@
-![Demo](./public/myProject.gif)
+![Demo](./client/public/myProject.gif)
 
 
-<img width="317" alt="image" src="./public//project.png">
+<img width="317" alt="image" src="./client/public/project.png">
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+First, run the development api:
 ```bash
 npm start
 # or
