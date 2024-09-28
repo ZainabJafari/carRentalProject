@@ -20,7 +20,7 @@ export const CarProvider = ({ children }: { children: ReactNode }) => {
   const [noResults, setNoResults] = useState<boolean>(false);
 
   const BASE_URL = process.env.NODE_ENV === 'production'
-  ? 'https://car-rental-ten-sooty.vercel.app/api/cars' // Replace with your actual Vercel API URL
+  ? 'https://car-rental-ten-sooty.vercel.app/api/cars' 
   : 'http://localhost:8800/api/cars';
 
 
